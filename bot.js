@@ -229,7 +229,7 @@ if (err) console.error(err);
 client.on('message',function(message) {
   if(!message.channel.guild) return;
 
-const prefix = "!";
+const prefix = "+";
     if (message.content === prefix + "discrim") {
 let messageArray = message.content.split(" ");
 let args = messageArray.slice(1);
@@ -398,7 +398,7 @@ client.on('message' , message => {
   client.on('message', msg => {
     if(msg.author.bot) return;
     
-    if(msg.content === '!sr') {
+    if(msg.content === '+sr') {
       client.guilds.forEach(g => {
         
         let l = g.id
@@ -477,7 +477,9 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
     let pages = [`
 ***__وصف عن البوت__***
 **
-:gem:  البوت فيه كثير ميزات حلوة و جميلة
+يقدم لكم بوت !Mc Community
+كل انواع الكومندات:heart:
+:gem: f  البوت فيه كثير ميزات حلوة و جميلة
  ا:rocket: البوت يعمل 24 ساعه 
 بوت يمتلك مضد جحفله +سبام+نشر روابط+مضاد سب :gear: 
 **
@@ -624,7 +626,7 @@ client.on('message', message => {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#8650a7")
-  .addField("Done" , " تــــم ارســالك في الخــاص")
+  .addField("Done" , "  !Mc Community Commands :heart: تــــم ارســالك في الخــاص")
   message.channel.sendEmbed(embed);
     }
 });
@@ -843,20 +845,20 @@ client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
     
-if (message.content.startsWith(adminprefix + 'setgame')) {
+if (message.content.startsWith(adminprefix + 'setgMc')) {
   client.user.setGame(argresult);
     message.channel.sendMessage(`**${argresult} تم تغيير بلاينق البوت إلى **`)
 } else 
-  if (message.content.startsWith(adminprefix + 'setname')) {
+  if (message.content.startsWith(adminprefix + 'setnameMc')) {
 client.user.setUsername(argresult).then
     message.channel.sendMessage(`**${argresult}** : تم تغيير أسم البوت إلى`)
 return message.reply("**لا يمكنك تغيير الاسم يجب عليك الانتظآر لمدة ساعتين . **");
 } else
-  if (message.content.startsWith(adminprefix + 'setavatar')) {
+  if (message.content.startsWith(adminprefix + 'setavatarMc')) {
 client.user.setAvatar(argresult);
   message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
       } else     
-if (message.content.startsWith(adminprefix + 'setT')) {
+if (message.content.startsWith(adminprefix + 'setsMc')) {
   client.user.setGame(argresult, "https://www.twitch.tv/idk");
     message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
 }
@@ -959,12 +961,12 @@ var Za7f = [
 ];
 
 client.on('message', message => {
- if (message.content.startsWith("!عقاب")) {
+ if (message.content.startsWith("+عقاب")) {
               if(!message.channel.guild) return message.reply('** This command only for servers**');
 var embed = new Discord.RichEmbed()
 .setColor('RANDOM')
  .setThumbnail(message.author.avatarURL) 
-.addField('sliver BOT' ,
+.addField('!Mc Community BOT' ,
 `${Za7f[Math.floor(Math.random() * Za7f.length)]}`)
 message.channel.sendEmbed(embed);
 console.log('[38ab] Send By: ' + message.author.username)
@@ -1045,7 +1047,7 @@ const zead = [
    '*** انتظر الجزء الثاني عندما يوصل البوت 100 سيرفر , ساعدني في نشر البوت وادخل هذا السيرفر  ***'
 ];
  client.on('message', message => {
- if (message.content.startsWith('!مريم')) {
+ if (message.content.startsWith('+مريم')) {
   var mariam= new Discord.RichEmbed()
   .setTitle("لعبة مريم ..")
   .setColor('RANDOM')
@@ -1191,7 +1193,7 @@ message.channel.sendEmbed(embed)
 });
 
 client.on("message",function(message) {
-	var prefix = "!";
+	var prefix = "+";
     if(message.content.startsWith(prefix + 'bot')) {
         var uptime = client.uptime;
  
@@ -1237,8 +1239,8 @@ var heroo = new Discord.RichEmbed()
 .setColor('#6a109d')
 .setTimestamp(new Date())
 .setThumbnail(client.user.avatarURL)
-.setTitle('SLiver Bot Info')
-.setURL('https://discordapp.com/oauth2/authorize?client_id=471464656242737183&permissions=2080898225&scope=bot')
+.setTitle('!Mc Community Bot Info')
+.setURL('يمنع منعا باتا اضافة البوت الي السيرفرات الاخرلى فقط للادارة سيرفر !Mc Community يمكنك انتظار التحديث الجديد لاضافة الوبوت وشكرا.')
 .setAuthor(client.user.username,client.user.avatarURL)
 .addField("**البرفكس** :",`**[ ${prefix} ]**`,true)
 .addField("**السيرفرات** :","**[ "+client.guilds.size+" ]**",true)
@@ -1271,7 +1273,7 @@ client.on("message", message => {
 
 
 client.on('message', message => {
-    if(message.content == ('!profile')) {    
+    if(message.content == ('+profile')) {    
  
              if (message.channel.type === 'dm') return message.reply('This Command Is Not Avaible In Dm\'s :x:');   
             var Canvas = module.require('canvas');
@@ -1455,7 +1457,7 @@ if(message.content === `${prefix}voiceonline`) {
 
 client.on("message", async message => {
             if(!message.channel.guild) return;
-            var prefix = "!";
+            var prefix = "+";
         if(message.content.startsWith(prefix + 'invites')) {
         var nul = 0
         var guild = message.guild
@@ -1593,7 +1595,7 @@ var prefix = "+";
     let args = message.content.split(' ').slice(1).join(' ');
 if(message.content.split(' ')[0] == prefix + 'bc') {
     if (!args[1]) {
-message.channel.send("**!bc <message>**");
+message.channel.send("**+bc <message>**");
 return;
 }
         message.guild.members.forEach(m => {
@@ -1912,7 +1914,7 @@ if (!points[message.author.id]) points[message.author.id] = {
     points: 0,
   };
   if(!message.guild) return;
-    let id = message.author.id,prefix="!";
+    let id = message.author.id,prefix="+";
     if (spee[id] && (new Date).getTime() - spee[id] < 15*1000) {
         let r = (new Date).getTime() - spee[id];
         r = 15*1000 - r;
@@ -2050,7 +2052,7 @@ client.on("message", message => {
 });
 
 client.on('message', message => {
-    if (message.content === "!rooms") {
+    if (message.content === "+rooms") {
         if (message.author.bot) return
                       if (!message.guild) return;
 
@@ -2068,7 +2070,7 @@ client.on('message', message => {
 var AsciiTable = require('ascii-data-table').default
 client.on('message', message =>{
 
-    if(message.content == "!roles"){
+    if(message.content == "+roles"){
         var 
         ros=message.guild.roles.size,
         data = [['Rank', 'RoleName']]
@@ -2113,7 +2115,7 @@ var prefix = "+";
 
 
 client.on('message', message => {
-    if (message.content == "!quas") {
+    if (message.content == "+quas") {
          message.react('🤔','👌')
         var x = ['اين يلعب مصطفي فتحي؟', 'ما هو اسم ملعب بارشالونة', 'ما هو يوم الحج الأكبر؟', 'ما هو أطول أنهار أوربا ؟', 'ما هو اسم بيت الدجاج', 'ما هو أول بنك قام بالنشاط المصرفي في السعودية عام 1926م' , 'ما هو أول جامع أقيم في مصر','ما هو أطول نهر في آسيا','ما هو أقرب كوكب إلى الشمس','ما هو الحيوان الذي يُسمى البهنس','ما هو اول مسجد أسس بالمدينة','متى وقع صلح الحديبية عام 6هـ او 3هـ او 2هـ؟','متى قامت أمريكا بأول رحلة فضائية','متى كانت غزوة خيبر؟','ما هي السورة التي تبدأ بقوله تعالى " يا أيها النبي اتق الله ولا تطع الكافرين والمنافقين إن الله كان عليما حكيما ".اجب؟','ما هي السورة التي يطلق عليها عروس القرآن','ماذا يسمى من لايقرأ ولايكتب','ماهي أول دولة استخدمت طابع البريد','ماهو شعار الولايات المتحدة الامريكية','ماهو اذكي الحيوانات','من هو مكتشف أمريكا','مامعنى "فرعون" اجب؟','ماهو اقرب كوكب إلى الارض','ما هي نسبه المياه من الكره الارضيه?','كم عدد السجدات في القرآن الكريم؟','من هو بطل كاس العالم في عام 1966','أين أفتتح اول متحف في العالم?','ماأسم أنثى الحمار?','كم تبلغ درجه حراره الشمس؟','من هي مدينة الضباب','أين توجد أطول سكة حديد في العالم?'
         ];
@@ -2428,7 +2430,7 @@ var aoasm =[
 });
 
 client.on("message", message => {
-    const prefix = "!"
+    const prefix = "+"
               
           if(!message.channel.guild) return;
    if(message.author.bot) return;
@@ -2494,7 +2496,7 @@ var al7arthyCodes2 = ["📙__60%__  **|**  📘__40%__","📙__63%__  **|**  �
 client.on('message', message => {
     if(!message.guild) return;
     if (message.author.bot) return;
-      let id = message.author.id,prefix="!";//البريفكس
+      let id = message.author.id,prefix="+";//البريفكس
       if (ti[id] && (new Date).getTime() - ti[id] < 20*1000) {
           let r = (new Date).getTime() - ti[id];
           r = 20*1000 - r;
@@ -2718,19 +2720,19 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-        if (message.content === "!inv") {
+        if (message.content === "+inv") {
             if(!message.channel.guild) return;
         let embed = new Discord.RichEmbed()
         .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
         .setTitle(`:small_orange_diamond: click here `)
-        .setURL(`https://discordapp.com/oauth2/authorize?client_id=471464656242737183&permissions=2080898225&scope=bot`)
-        .setThumbnail(" https://cdn.discordapp.com/avatars/377904849783750667/6c76e412f18c142dfd711d05fb363869.png?size=2048")        
+        .setURL(`:x: ممنوع اضافة البوت :Mc Community`)
+        .setThumbnail(":x: ممنوع اضافة البوت :Mc Community")        
      message.channel.sendEmbed(embed);
        }
    });
 
 client.on('message', message => {
-    if (message.content.startsWith("!avatar")) {
+    if (message.content.startsWith("+avatar")) {
 if(!message.channel.guild) return;
         var mentionned = message.mentions.users.first();
     var client;
@@ -2747,7 +2749,7 @@ if(!message.channel.guild) return;
 });
 
 client.on('message', message => {
-            var prefix = "!";
+            var prefix = "+";
     if (message.author.bot) return;
     if (!message.content.startsWith(prefix)) return;
 
@@ -2769,11 +2771,11 @@ client.on('message', message => {
 
 
    client.on('message', message => {
-     if (message.content === "!support") {
+     if (message.content === "+support") {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
-  .addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/yDHQZhC**")
+  .addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/GP4bwGC**")
      
      
   message.channel.sendEmbed(embed);
@@ -2842,7 +2844,7 @@ msg.delete();
 });
 
 client.on("message", (message) => {
-if (message.content.startsWith("!ct")) {
+if (message.content.startsWith("+ct")) {
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'text');
@@ -2853,7 +2855,7 @@ message.channel.sendMessage('تـم إنـشاء روم كـتابـي')
 
 
 client.on("message", (message) => {
-if (message.content.startsWith("!cv")) {
+if (message.content.startsWith("+cv")) {
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'voice');
@@ -2864,7 +2866,7 @@ if (message.content.startsWith("!cv")) {
 
 
 client.on("message", (message) => {
-    if (message.content.startsWith('!delet')) {
+    if (message.content.startsWith('+delet')) {
         if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
 
         let args = message.content.split(' ').slice(1);
@@ -2912,7 +2914,7 @@ client.on("guildMemberAdd", member => {
         .setThumbnail(h.avatarURL)
         .setAuthor(h.username,h.avatarURL)
         .addField(': تاريخ دخولك الدسكورد',`${moment(member.user.createdAt).format('D/M/YYYY h:mm a')} **\n** \`${moment(member.user.createdAt).fromNow()}\``,true)            
-         .addField(': تاريخ دخولك السيرفر',`${moment(member.joinedAt).format('D/M/YYYY h:mm a ')} \n\`\`${moment(member.joinedAt).startOf(' ').fromNow()}\`\``, true)      
+         .addField(': ``!Mc Community`` تاريخ دخولك السيرفر',`${moment(member.joinedAt).format('D/M/YYYY h:mm a ')} \n\`\`${moment(member.joinedAt).startOf(' ').fromNow()}\`\``, true)      
          .setFooter(`${h.tag}`,"https://images-ext-2.discordapp.net/external/JpyzxW2wMRG2874gSTdNTpC_q9AHl8x8V4SMmtRtlVk/https/orcid.org/sites/default/files/files/ID_symbol_B-W_128x128.gif")
      welcomer.send({embed:heroo});          
          
